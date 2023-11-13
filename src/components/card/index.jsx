@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./style.module.css";
 
+
 function Card({ title, img, id }) {
   return (
     <div style={{ cursor: "pointer" }} className={style.card_container}>

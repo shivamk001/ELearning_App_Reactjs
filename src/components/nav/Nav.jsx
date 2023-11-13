@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Nav.module.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 function Nav() {
   return (
@@ -16,8 +16,9 @@ function Nav() {
             <h4>Coding Ninjas</h4>
           </div>
           <div className={style.nav_details}>
-            <Link to='/courses'><button>Courses</button></Link>
-            
+          <button>
+            <NavLink to='/courses'>{({isActive})=>(isActive?'In Courses':'Go to courses')}</NavLink>
+          </button>
           </div>
         </div>
       </nav>
